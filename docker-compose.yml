@@ -1,0 +1,12 @@
+version: '2'
+services:
+  UDEAlarms:
+    build: .
+    image: udealarms:1.0
+    networks:
+      - mynetwork
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+networks:
+  mynetwork:
+    driver: bridge
