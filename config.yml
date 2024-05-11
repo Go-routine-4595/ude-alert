@@ -4,9 +4,9 @@ service:
   user: postgres
   password: "{qqo0QGf*[a+KCs="
   database: postgres
-  client_cert: "/Users/christophebuffard/Documents/Dev/github.com/ude-alert/cert/client-cert.pem"
-  client_key: "/Users/christophebuffard/Documents/Dev/github.com/ude-alert/cert/client-key.pem"
-  server_cert: "/Users/christophebuffard/Documents/Dev/github.com/ude-alert/cert/server-ca.pem"
+  client_cert: "cert/client-cert.pem"
+  client_key: "cert/client-key.pem"
+  server_cert: "cert/server-ca.pem"
 frequency:
   frequency: 5
   max_peak: 10
