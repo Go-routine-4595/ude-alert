@@ -7,4 +7,3 @@ COPY cert/client-key.pem ./
 COPY config.yaml ./config.yaml
 COPY udealarms-linux-x86 ./
 CMD ["/UDEAlarms/udealarms-linux-x86"]
-

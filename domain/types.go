@@ -5,9 +5,10 @@ import (
 	"time"
 )
 
-type Service interface {
+type IService interface {
 	LoadEquipment(v int) error
 	UpdateEquipment(count int) error
+	AddEquipment(e []byte) error
 }
 
 // Equipment represents the 'Equipment' table

@@ -2,6 +2,7 @@ package udealarm
 
 import (
 	"fmt"
+	"github.com/Go-routine-4595/ude-alert/domain"
 	"github.com/rs/zerolog"
 	"os"
 	"sync"
@@ -30,7 +31,7 @@ func StartSim(conf string) {
 	var (
 		wg       *sync.WaitGroup
 		database service.Storer
-		svc      *service.Service
+		svc      domain.IService
 		sim      *simulationpackage.DataGen
 	)
 
@@ -61,7 +62,7 @@ func AddEquipment(conf string, data string) error {
 		wg       *sync.WaitGroup
 		err      error
 		database service.Storer
-		svc      *service.Service
+		svc      domain.IService
 		zlog     zerolog.Logger
 	)
 

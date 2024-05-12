@@ -36,7 +36,7 @@ type Service struct {
 	log   zerolog.Logger
 }
 
-func NewService(store Storer) *Service {
+func NewService(store Storer) domain.IService {
 
 	return &Service{
 		store: store.(Storer),

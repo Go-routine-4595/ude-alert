@@ -18,14 +18,14 @@ type Consumer interface {
 
 type DataGen struct {
 	sim     Consumer
-	svc     domain.Service
+	svc     domain.IService
 	maxPeak int
 	freq    int
 	wg      *sync.WaitGroup
 	log     zerolog.Logger
 }
 
-func NewDataGen(freq int, maxPeak int, svc domain.Service, wg *sync.WaitGroup) *DataGen {
+func NewDataGen(freq int, maxPeak int, svc domain.IService, wg *sync.WaitGroup) *DataGen {
 
 	var sim *DataGen
 
